@@ -7,12 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE067DAD25560C92004519C7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE067DAC25560C91004519C7 /* NetworkManager.swift */; };
+		AE067DB32556CF60004519C7 /* Color+AssetColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE067DB22556CF60004519C7 /* Color+AssetColors.swift */; };
+		AE067DBB25573049004519C7 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE067DBA25573048004519C7 /* AppStore.swift */; };
+		AE067DC025573148004519C7 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE067DBF25573148004519C7 /* DebugView.swift */; };
+		AE067DC525574F0F004519C7 /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE067DC425574F0F004519C7 /* ContactManager.swift */; };
+		AE067DCA25575A7B004519C7 /* InfectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE067DC925575A7A004519C7 /* InfectionView.swift */; };
+		AE067DD025585F18004519C7 /* UploadResultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE067DCF25585F18004519C7 /* UploadResultCard.swift */; };
+		AE067DDB25588357004519C7 /* SymptomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE067DDA25588357004519C7 /* SymptomView.swift */; };
+		AE067DE025589C4A004519C7 /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE067DDF25589C49004519C7 /* PrivacyView.swift */; };
+		AE067DE52558ACD7004519C7 /* SymptomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE067DE42558ACD6004519C7 /* SymptomsView.swift */; };
 		AEF3D58E2555B26C00879FF2 /* CovidTrackAndTrace_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3D58D2555B26C00879FF2 /* CovidTrackAndTrace_iOSApp.swift */; };
-		AEF3D5902555B26C00879FF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3D58F2555B26C00879FF2 /* ContentView.swift */; };
+		AEF3D5902555B26C00879FF2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3D58F2555B26C00879FF2 /* HomeScreen.swift */; };
 		AEF3D5922555B27400879FF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF3D5912555B27400879FF2 /* Assets.xcassets */; };
 		AEF3D5952555B27400879FF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF3D5942555B27400879FF2 /* Preview Assets.xcassets */; };
 		AEF3D5A02555B27500879FF2 /* CovidTrackAndTrace_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3D59F2555B27500879FF2 /* CovidTrackAndTrace_iOSTests.swift */; };
 		AEF3D5AB2555B27500879FF2 /* CovidTrackAndTrace_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3D5AA2555B27500879FF2 /* CovidTrackAndTrace_iOSUITests.swift */; };
+		AEF3D5BF2556069D00879FF2 /* SubmitResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3D5BE2556069D00879FF2 /* SubmitResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +44,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE067DAC25560C91004519C7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AE067DB22556CF60004519C7 /* Color+AssetColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AssetColors.swift"; sourceTree = "<group>"; };
+		AE067DBA25573048004519C7 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		AE067DBF25573148004519C7 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
+		AE067DC425574F0F004519C7 /* ContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactManager.swift; sourceTree = "<group>"; };
+		AE067DC925575A7A004519C7 /* InfectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfectionView.swift; sourceTree = "<group>"; };
+		AE067DCF25585F18004519C7 /* UploadResultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadResultCard.swift; sourceTree = "<group>"; };
+		AE067DDA25588357004519C7 /* SymptomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomView.swift; sourceTree = "<group>"; };
+		AE067DDF25589C49004519C7 /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
+		AE067DE42558ACD6004519C7 /* SymptomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsView.swift; sourceTree = "<group>"; };
 		AEF3D58A2555B26C00879FF2 /* CovidTrackAndTrace-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CovidTrackAndTrace-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF3D58D2555B26C00879FF2 /* CovidTrackAndTrace_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidTrackAndTrace_iOSApp.swift; sourceTree = "<group>"; };
-		AEF3D58F2555B26C00879FF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AEF3D58F2555B26C00879FF2 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		AEF3D5912555B27400879FF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEF3D5942555B27400879FF2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AEF3D5962555B27400879FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +66,7 @@
 		AEF3D5A62555B27500879FF2 /* CovidTrackAndTrace-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CovidTrackAndTrace-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF3D5AA2555B27500879FF2 /* CovidTrackAndTrace_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidTrackAndTrace_iOSUITests.swift; sourceTree = "<group>"; };
 		AEF3D5AC2555B27500879FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEF3D5BE2556069D00879FF2 /* SubmitResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +94,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE067DB12556CF4D004519C7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE067DB22556CF60004519C7 /* Color+AssetColors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE067DCE25585F0B004519C7 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				AE067DCF25585F18004519C7 /* UploadResultCard.swift */,
+				AE067DDA25588357004519C7 /* SymptomView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		AEF3D5812555B26B00879FF2 = {
 			isa = PBXGroup;
 			children = (
@@ -95,11 +134,15 @@
 		AEF3D58C2555B26C00879FF2 /* CovidTrackAndTrace-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				AE067DB12556CF4D004519C7 /* Extensions */,
+				AEF3D5C3255606A100879FF2 /* Views */,
 				AEF3D58D2555B26C00879FF2 /* CovidTrackAndTrace_iOSApp.swift */,
-				AEF3D58F2555B26C00879FF2 /* ContentView.swift */,
 				AEF3D5912555B27400879FF2 /* Assets.xcassets */,
 				AEF3D5962555B27400879FF2 /* Info.plist */,
 				AEF3D5932555B27400879FF2 /* Preview Content */,
+				AE067DAC25560C91004519C7 /* NetworkManager.swift */,
+				AE067DBA25573048004519C7 /* AppStore.swift */,
+				AE067DC425574F0F004519C7 /* ContactManager.swift */,
 			);
 			path = "CovidTrackAndTrace-iOS";
 			sourceTree = "<group>";
@@ -128,6 +171,20 @@
 				AEF3D5AC2555B27500879FF2 /* Info.plist */,
 			);
 			path = "CovidTrackAndTrace-iOSUITests";
+			sourceTree = "<group>";
+		};
+		AEF3D5C3255606A100879FF2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE067DCE25585F0B004519C7 /* SubViews */,
+				AEF3D5BE2556069D00879FF2 /* SubmitResultView.swift */,
+				AEF3D58F2555B26C00879FF2 /* HomeScreen.swift */,
+				AE067DBF25573148004519C7 /* DebugView.swift */,
+				AE067DC925575A7A004519C7 /* InfectionView.swift */,
+				AE067DDF25589C49004519C7 /* PrivacyView.swift */,
+				AE067DE42558ACD6004519C7 /* SymptomsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +316,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEF3D5902555B26C00879FF2 /* ContentView.swift in Sources */,
+				AE067DD025585F18004519C7 /* UploadResultCard.swift in Sources */,
+				AE067DCA25575A7B004519C7 /* InfectionView.swift in Sources */,
+				AE067DE52558ACD7004519C7 /* SymptomsView.swift in Sources */,
+				AE067DDB25588357004519C7 /* SymptomView.swift in Sources */,
+				AE067DAD25560C92004519C7 /* NetworkManager.swift in Sources */,
+				AEF3D5BF2556069D00879FF2 /* SubmitResultView.swift in Sources */,
+				AE067DE025589C4A004519C7 /* PrivacyView.swift in Sources */,
+				AEF3D5902555B26C00879FF2 /* HomeScreen.swift in Sources */,
+				AE067DC025573148004519C7 /* DebugView.swift in Sources */,
+				AE067DBB25573049004519C7 /* AppStore.swift in Sources */,
+				AE067DB32556CF60004519C7 /* Color+AssetColors.swift in Sources */,
+				AE067DC525574F0F004519C7 /* ContactManager.swift in Sources */,
 				AEF3D58E2555B26C00879FF2 /* CovidTrackAndTrace_iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
