@@ -10,11 +10,12 @@ import Foundation
 class NetworkManager {
     
     static var shared = NetworkManager()
+    let baseURL = "https://covid19-middleware.herokuapp.com"
     
     func validateTestCode(code: String, completion: @escaping (Bool?, Error?)->()) {
         
         let input = code.replacingOccurrences(of: " ", with: "")
-        let url = URL(string: "http://127.0.0.1:8080/api/verifyPositiveTest/\(input)")!
+        let url = URL(string: "\(baseURL)/api/verifyPositiveTest/\(input)")!
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
@@ -51,7 +52,7 @@ class NetworkManager {
     
     func uploadPersonalTokens(tokens: [String]) {
         
-        let Url = String(format: "http://127.0.0.1:8080/api/infectedTokens")
+        let Url = String(format: "\(baseURL)/api/infectedTokens")
         guard let serviceUrl = URL(string: Url) else { return }
         let parameters: [String: Any] = [
             "infectedTokens": tokens
@@ -81,7 +82,7 @@ class NetworkManager {
     }
     
     func getListOfInfectedTokens(completion: @escaping ([String]) -> () ) {
-        let url = URL(string: "http://127.0.0.1:8080/api/infectedTokens")!
+        let url = URL(string: "\(baseURL)/api/infectedTokens")!
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {

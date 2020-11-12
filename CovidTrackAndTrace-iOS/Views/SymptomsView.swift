@@ -10,11 +10,7 @@ import SwiftUI
 struct SymptomsView: View {
     
     var body: some View {
-        ZStack {
-            Color.appBackground
-                .ignoresSafeArea()
-            
-            ScrollView {
+            ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 16) {
                     SymptomCards(viewModel: SymptomViewModel(title: "Coughing Fits", subtitle: "A new, continuous cough – this means coughing a lot for more than an hour, or 3 or more coughing episodes in 24 hours (if you usually have a cough, it may be worse than usual).", icon: .cough))
                         .shadow(color: Color.shadowColor.opacity(0.4),
@@ -33,9 +29,12 @@ struct SymptomsView: View {
                                 radius: 12)
                 }
                 .padding(.all)
+                .navigationTitle("Symptoms")
             }
-        }
+            .background(Color.appBackground
+                            .ignoresSafeArea())
     }
+            
 }
 
 struct SymptomCards: View {
@@ -74,7 +73,6 @@ struct SymptomCards: View {
         .frame(width: UIScreen.main.bounds.width * 0.9)
         .background(Color.white)
         .cornerRadius(24)
-        .navigationTitle("Symptoms")
         
     }
 }

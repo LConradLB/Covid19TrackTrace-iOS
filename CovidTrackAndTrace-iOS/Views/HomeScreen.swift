@@ -63,7 +63,7 @@ struct HomeScreen: View {
                             destination: DebugView(),
                             isActive: $showDebugView,
                             label: {
-                                LabelButton(label: "Access Debug", icon: .debug, onTap: { showDebugView.toggle()})
+                                LabelButton(label: "Debug Menu", icon: .debug, onTap: { showDebugView.toggle()})
                             })
                             .padding(.horizontal)
                             .buttonStyle(PlainButtonStyle())
@@ -86,14 +86,24 @@ struct LabelButton: View {
     let label: String
     let icon: LabelButtonIcon
     let onTap: (()->())?
+    let height: CGFloat = 60
     var body: some View {
-        HStack {
-            Spacer()
-            Label(label, systemImage: icon.rawValue)
-                .foregroundColor(.black)
+        HStack(spacing:16) {
+            Image(systemName: icon.rawValue)
+                .renderingMode(.template)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: height, height: height)
+                .scaleEffect(0.5)
+                .background(Color.interactionColor)
+                .foregroundColor(.white)
+            
+            Text(label)
+                .font(.title3)
+            
             Spacer()
         }
-        .frame(height: 60)
+        .frame(height: height)
         .background(Color.white)
         .cornerRadius(15)
         .onTapGesture {

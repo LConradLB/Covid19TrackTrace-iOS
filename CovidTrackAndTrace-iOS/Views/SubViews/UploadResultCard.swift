@@ -27,6 +27,7 @@ struct UploadResultCard: View {
                         HStack {
                             Spacer()
                             Text("Upload Code")
+                                .bold()
                             Spacer()
                         }
                         .padding(.vertical)
