@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct LabelButton: View {
+    @Environment(\.colorScheme) var colorScheme
     let label: String
     let icon: LabelButtonIcon
     let onTap: (()->())?
     let height: CGFloat = 60
+    
     var body: some View {
         HStack(spacing:16) {
             Image(systemName: icon.rawValue)
@@ -25,12 +27,12 @@ struct LabelButton: View {
             
             Text(label)
                 .font(.title3)
-                .foregroundColor(.black)
+                .foregroundColor(.label)
             
             Spacer()
         }
         .frame(height: height)
-        .background(Color.white)
+        .background(Color.secondaryAppBackground)
         .cornerRadius(15)
         .onTapGesture {
             if let tap = onTap {

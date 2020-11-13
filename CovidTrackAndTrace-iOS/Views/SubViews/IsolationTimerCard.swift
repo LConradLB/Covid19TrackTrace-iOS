@@ -101,6 +101,7 @@ struct IsolationProgressOverlay: View {
 }
 
 struct HorizontalProgressBar: View {
+    @Environment(\.colorScheme) var colorScheme
     var progress: Float
     let overlay: AnyView
     
@@ -108,8 +109,7 @@ struct HorizontalProgressBar: View {
         ZStack {
             GeometryReader { reader in
                 RoundedRectangle(cornerRadius: 25)
-                    .opacity(0.3)
-                    .foregroundColor(.white)
+                    .foregroundColor(.secondaryAppBackground)
                 
                 RoundedRectangle(cornerRadius: 25)
                     .foregroundColor(progress >= 1 ? .approvedColor : .interactionColor)

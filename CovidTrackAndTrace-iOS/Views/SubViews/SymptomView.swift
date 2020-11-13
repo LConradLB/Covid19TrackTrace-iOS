@@ -50,6 +50,8 @@ struct SymptomsScrollsView: View {
 }
 
 struct SymptomView: View {
+    
+    @Environment(\.colorScheme) var colorScheme
     let viewModel: SymptomViewModel
     
     var body: some View {
@@ -61,11 +63,11 @@ struct SymptomView: View {
                     Text(viewModel.title)
                         .font(.title2)
                         .bold()
-                        .foregroundColor(.black)
+                        .foregroundColor(.label)
                     
                     Text(viewModel.subtitle)
                         .font(.caption2)
-                        .foregroundColor(.black)
+                        .foregroundColor(.label)
                     
                     
                 }
@@ -73,14 +75,14 @@ struct SymptomView: View {
                 Image(viewModel.icon.rawValue)
                     .resizable()
                     .renderingMode(.template)
-                    .foregroundColor(.interactionColor)
+                    .foregroundColor(colorScheme == .dark ? .blue : .interactionColor)
                     .scaleEffect(0.5)
                     .aspectRatio(contentMode: .fit)
             }.padding()
             Spacer()
         }
         .frame(width: UIScreen.main.bounds.width * 0.9, height: 90)
-        .background(Color.white)
+        .background(Color.secondaryAppBackground)
         .cornerRadius(24)
     }
 }

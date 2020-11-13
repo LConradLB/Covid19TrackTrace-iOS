@@ -16,6 +16,7 @@ extension Color {
     static var secondaryLabel = Color(UIColor.secondaryLabel)
     
     static var appBackground = Color(UIColor(named: "AppBackground") ?? .systemBackground)
+    static var secondaryAppBackground = Color(UIColor(named: "SecondaryAppBackground") ?? .secondarySystemBackground)
     static var approvedColor = Color(UIColor(named: "ApprovedColor") ?? .systemGreen)
     static var rejectedColor = Color(UIColor(named: "RejectedColor") ?? .systemRed)
     static var interactionColor =  Color(UIColor(named: "InteractionColor") ?? .cyan)

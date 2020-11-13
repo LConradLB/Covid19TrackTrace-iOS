@@ -47,7 +47,7 @@ struct SymptomCards: View {
                     Text(viewModel.title)
                         .font(.title2)
                         .bold()
-                        .foregroundColor(.black)
+                        .foregroundColor(.label)
                     Spacer()
                     VStack(alignment: .center){
                         Image(viewModel.icon.rawValue)
@@ -65,13 +65,13 @@ struct SymptomCards: View {
             
             Text(viewModel.subtitle)
                 .font(.caption2)
-                .foregroundColor(.black)
+                .foregroundColor(.label)
                 .padding(.vertical)
             
             
         }.padding()
         .frame(width: UIScreen.main.bounds.width * 0.9)
-        .background(Color.white)
+        .background(Color.secondaryAppBackground)
         .cornerRadius(24)
         
     }
