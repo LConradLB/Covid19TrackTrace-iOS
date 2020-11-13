@@ -15,10 +15,12 @@ struct UploadResultCard: View {
                 HStack {
                     VStack(alignment: .leading) {
                         Group {
-                            Text("Upload Your \nTest Code")
+                            Text("Upload Your Test Code")
                                 .font(.title2)
                                 .bold()
-                            Text("Find out your test results by uploading your test code")
+                                .fixedSize(horizontal: false, vertical: true)
+                            Text("Been for a test? Upload your code to get your results")
+                                .fixedSize(horizontal: false, vertical: true)
                         }
                         .foregroundColor(.white)
                         .font(.subheadline)

@@ -29,10 +29,10 @@ struct SymptomsView: View {
                                 radius: 12)
                 }
                 .padding(.all)
-                .navigationTitle("Symptoms")
+                
             }
-            .background(Color.appBackground
-                            .ignoresSafeArea())
+            .navigationTitle("Symptoms")
+            .background(Color.appBackground.ignoresSafeArea())
     }
             
 }

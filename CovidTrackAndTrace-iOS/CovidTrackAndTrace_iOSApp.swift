@@ -40,6 +40,7 @@ struct CovidTrackAndTrace_iOSApp: App {
                                                 isProximityTrackingEnabled: state.isTrackingProximityEnabled) { isNewInfectedToken in
             if isNewInfectedToken {
                 shouldShowProximityInfectionView = true
+                state.dateIsolatingUntil = Calendar.current.date(byAdding: .day, value: 14, to: Date())!
             }
         }
     }

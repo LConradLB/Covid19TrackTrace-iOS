@@ -13,6 +13,8 @@ class AppStore: ObservableObject, Codable {
     var collectedProximityTokens: [String] { didSet { saveState() } }
     var personalTokens: [String] { didSet { saveState() } }
     var isTrackingProximityEnabled: Bool { didSet { saveState() } }
+    @Published var dateIsolatingUntil: Date? { didSet { saveState() } }
+    
     let storage: UserDefaults
     
     init(collectedProximityTokens: [String] = [],
@@ -35,6 +37,7 @@ class AppStore: ObservableObject, Codable {
         collectedProximityTokens = try values.decode([String].self, forKey: .collectedProximityTokens)
         personalTokens = try values.decode([String].self, forKey: .personalTokens)
         isTrackingProximityEnabled = try values.decode(Bool.self, forKey: .trackingProximityEnabled)
+        dateIsolatingUntil = try values.decode(Date.self, forKey: .dateIsolatingUntil)
         storage = UserDefaults()
     }
 }
@@ -46,19 +49,21 @@ extension AppStore {
         try container.encode(collectedProximityTokens, forKey: .collectedProximityTokens)
         try container.encode(personalTokens, forKey: .personalTokens)
         try container.encode(isTrackingProximityEnabled, forKey: .trackingProximityEnabled)
+        try container.encode(dateIsolatingUntil, forKey: .dateIsolatingUntil)
+        
     }
     
     enum CodingKeys: String, CodingKey {
         case collectedProximityTokens
         case personalTokens
         case trackingProximityEnabled
+        case dateIsolatingUntil
     }
     
     func saveState() {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(self) {
-            let defaults = UserDefaults.standard
-            defaults.set(encoded, forKey: "AppState")
+            storage.set(encoded, forKey: "AppState")
         }
     }
     
@@ -69,7 +74,24 @@ extension AppStore {
             self.collectedProximityTokens = appState.collectedProximityTokens
             self.personalTokens = appState.personalTokens
             self.isTrackingProximityEnabled = appState.isTrackingProximityEnabled
+            
+            if let isolatoinDate = appState.dateIsolatingUntil {
+                self.dateIsolatingUntil = self.checkIsolationDate(date: isolatoinDate)
+            } else {
+                self.dateIsolatingUntil = nil
+            }
+            
           }
         }
+    }
+    
+    func checkIsolationDate(date: Date?) -> Date? {
+        
+        let currentDate = Date()
+        if let savedDate = date,
+           savedDate > currentDate {
+            return savedDate
+        }
+        return nil
     }
 }

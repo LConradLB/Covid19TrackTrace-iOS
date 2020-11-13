@@ -27,7 +27,7 @@ struct HomeScreen: View {
             Color.appBackground
                 .ignoresSafeArea()
             
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 
                 VStack(alignment: .leading) {
                     
@@ -37,6 +37,11 @@ struct HomeScreen: View {
                         .padding()
                     
                     VStack(spacing: 16) {
+                        
+                        if let isolationDate = appState.dateIsolatingUntil {
+                            IsolationTimerCard(dateIsolatingUntil: isolationDate)
+                                .padding(.horizontal)
+                        }
                         
                         NavigationLink(
                             destination: SubmitResultView(),
@@ -77,45 +82,6 @@ struct HomeScreen: View {
         }
         .navigationBarTitle("")
         .navigationBarHidden(true)
-    }
-}
-
-
-
-struct LabelButton: View {
-    let label: String
-    let icon: LabelButtonIcon
-    let onTap: (()->())?
-    let height: CGFloat = 60
-    var body: some View {
-        HStack(spacing:16) {
-            Image(systemName: icon.rawValue)
-                .renderingMode(.template)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: height, height: height)
-                .scaleEffect(0.5)
-                .background(Color.interactionColor)
-                .foregroundColor(.white)
-            
-            Text(label)
-                .font(.title3)
-            
-            Spacer()
-        }
-        .frame(height: height)
-        .background(Color.white)
-        .cornerRadius(15)
-        .onTapGesture {
-            if let tap = onTap {
-                tap()
-            }
-        }
-    }
-    
-    public enum LabelButtonIcon: String {
-        case debug = "ant.circle.fill"
-        case privacy = "lock.rectangle.fill"
     }
 }
 

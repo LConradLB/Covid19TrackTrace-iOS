@@ -17,6 +17,8 @@
 		AE067DDB25588357004519C7 /* SymptomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE067DDA25588357004519C7 /* SymptomView.swift */; };
 		AE067DE025589C4A004519C7 /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE067DDF25589C49004519C7 /* PrivacyView.swift */; };
 		AE067DE52558ACD7004519C7 /* SymptomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE067DE42558ACD6004519C7 /* SymptomsView.swift */; };
+		AE4652CE255EEC14008B9F37 /* IsolationTimerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4652CD255EEC14008B9F37 /* IsolationTimerCard.swift */; };
+		AE4652D3255EFA32008B9F37 /* LabelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4652D2255EFA32008B9F37 /* LabelButton.swift */; };
 		AEF3D58E2555B26C00879FF2 /* CovidTrackAndTrace_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3D58D2555B26C00879FF2 /* CovidTrackAndTrace_iOSApp.swift */; };
 		AEF3D5902555B26C00879FF2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3D58F2555B26C00879FF2 /* HomeScreen.swift */; };
 		AEF3D5922555B27400879FF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF3D5912555B27400879FF2 /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 		AE067DDA25588357004519C7 /* SymptomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomView.swift; sourceTree = "<group>"; };
 		AE067DDF25589C49004519C7 /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
 		AE067DE42558ACD6004519C7 /* SymptomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsView.swift; sourceTree = "<group>"; };
+		AE4652CD255EEC14008B9F37 /* IsolationTimerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsolationTimerCard.swift; sourceTree = "<group>"; };
+		AE4652D2255EFA32008B9F37 /* LabelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelButton.swift; sourceTree = "<group>"; };
 		AEF3D58A2555B26C00879FF2 /* CovidTrackAndTrace-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CovidTrackAndTrace-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF3D58D2555B26C00879FF2 /* CovidTrackAndTrace_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidTrackAndTrace_iOSApp.swift; sourceTree = "<group>"; };
 		AEF3D58F2555B26C00879FF2 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			children = (
 				AE067DCF25585F18004519C7 /* UploadResultCard.swift */,
 				AE067DDA25588357004519C7 /* SymptomView.swift */,
+				AE4652CD255EEC14008B9F37 /* IsolationTimerCard.swift */,
+				AE4652D2255EFA32008B9F37 /* LabelButton.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE067DD025585F18004519C7 /* UploadResultCard.swift in Sources */,
+				AE4652D3255EFA32008B9F37 /* LabelButton.swift in Sources */,
 				AE067DCA25575A7B004519C7 /* InfectionView.swift in Sources */,
 				AE067DE52558ACD7004519C7 /* SymptomsView.swift in Sources */,
 				AE067DDB25588357004519C7 /* SymptomView.swift in Sources */,
@@ -324,6 +331,7 @@
 				AEF3D5BF2556069D00879FF2 /* SubmitResultView.swift in Sources */,
 				AE067DE025589C4A004519C7 /* PrivacyView.swift in Sources */,
 				AEF3D5902555B26C00879FF2 /* HomeScreen.swift in Sources */,
+				AE4652CE255EEC14008B9F37 /* IsolationTimerCard.swift in Sources */,
 				AE067DC025573148004519C7 /* DebugView.swift in Sources */,
 				AE067DBB25573049004519C7 /* AppStore.swift in Sources */,
 				AE067DB32556CF60004519C7 /* Color+AssetColors.swift in Sources */,
